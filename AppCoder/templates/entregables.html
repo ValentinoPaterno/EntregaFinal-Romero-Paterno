@@ -1,0 +1,43 @@
+{% extends 'padre.html'%}
+
+{% load static %}
+
+{% block contenidoQueCambia%}
+    
+
+    <!--Colocamos lo que va a cambiar -->
+    <div style="height: 90rem; background-image: url(https://images.pexels.com/photos/167682/pexels-photo-167682.jpeg); background-size: cover; background-attachment: fixed;">
+        <header>
+            <div style="width: 60.5rem;" class="container position-relative">
+                <div style=" background-color: rgba(255, 255, 255, 0.61); margin-top: 3rem;" class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="text-center text-black mt-5">
+                            <!-- Page heading-->
+                            <h1 class="mb-5 fw-bold">Entregables</h1>
+                            <h2 class="mb-5 fw-bold">Django</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div style="display: flex; flex-direction: column; margin: 0 auto; align-self: center; width: fit-content; background-color: rgba(255, 255, 255, 0.623); padding: 10rem; margin-top: 6rem;">
+            <h1 style="text-align: center; font-weight: bold; margin-bottom: 3rem;">Agregar Entregable</h1>
+            {% if miFormulario.errors %}
+            <p style="color:red;">Estan mal los datos, revisar.</p>
+            {% endif %}
+        
+            <form action="" method="POST" enctype="multipart/form-data">
+        
+                <div style="display: flex; flex-direction: column;">
+                    {% csrf_token %}
+                    <table>
+                        {{miFormulario.as_table}}
+                    </table>
+                    <input type="submit" value="Enviar">
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

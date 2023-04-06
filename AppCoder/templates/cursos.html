@@ -1,0 +1,35 @@
+{% extends 'padre.html'%}
+
+{% load static %}
+
+{% block contenidoQueCambia%}
+    <div style="background-image: url(https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg); background-attachment: fixed; height: 100rem;">
+        <header>
+            <div class="container position-relative">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="text-center text-white">
+                            <!-- Page heading-->
+                            <h1 style="font-weight: bold; margin: 10rem 0rem 20rem 0rem; color: black; background-color: rgba(255, 255, 255, 0.808); border-radius: 20rem;">CURSOS</h1>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+       
+
+        <div style="height: 40rem; display: flex; flex-direction: column; align-items: center; justify-content: space-around; color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0.445);">
+            <h1>Agregar Curso/s</h1>
+            {% if miFormulario.errors %}
+            <p style="color:red;">Estan mal los datos, revisar.</p>
+            {% endif %}
+            <form action="" method="POST">{% csrf_token %}
+                <table>{{miFormulario.as_table}}</table>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

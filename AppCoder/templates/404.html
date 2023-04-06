@@ -1,0 +1,46 @@
+{% extends "padre.html" %}
+
+{% load static %}
+{% block contenidoQueCambia%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error 404 - Página no encontrada</title>
+    <style>
+        /* Estilos CSS para personalizar la apariencia de la página */
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+        h1 {
+            color: #f30b0b;
+            font-size: 36px;
+            margin-top: 100px;
+            text-align: center;
+        }
+        p {
+            color: #07d0f3;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="masthead">
+        <div class="container position-relative">
+            <div class="row justify-content-center">
+                <div class="col-xl-6">
+                    <div class="text-center text-white">
+                        <!-- Page heading-->
+                        <h1>Error 404 - Página no encontrada</h1>
+                        <p>Lo siento, la página que estás buscando no se puede encontrar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
+{% endblock %}

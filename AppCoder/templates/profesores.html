@@ -1,0 +1,40 @@
+{% extends 'padre.html'%}
+
+{% load static %}
+
+{% block contenidoQueCambia%}
+        
+
+    <!--Colocamos lo que va a cambiar -->
+    <div style="font-weight: bold; height: 90rem; background-image: url(https://images.pexels.com/photos/3184658/pexels-photo-3184658.jpeg); background-size: cover; background-attachment: fixed;">
+        <header>
+            <div class="container position-relative">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div style="background-color: rgba(255, 255, 255, 0.623);" class="text-center text-black p-4 m-4">
+                            <!-- Page heading-->
+                            <h1 class="mb-5 fw-bold">Profesores</h1>
+                            <h2 class="mb-5 fw-bold">Django</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div style="width: fit-content; background-color: rgba(255, 255, 255, 0.521); display: flex; flex-direction: column; margin: 0 auto; padding: 11rem;">
+            <h1>Agregar profesor/es</h1>
+            {% if miFormulario.errors %}
+            <p style="color:red;">Estan mal los datos, revisar.</p>
+            {% endif %}
+        
+            <form action="" method="POST">{% csrf_token %}
+            
+            <table>
+                    {{miFormulario.as_table}}
+            </table>
+        
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 16px;
+            color: #333;
+            background-image: url('https://images.unsplash.com/photo-1517817748493-49ec54a32465?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-repeat: no-repeat;  
+        }
+        h1{
+            
+            color: white;
+            text-shadow: -4px 3px 6px rgba(255,219,75,0.6);
+        }
+        .form{
+            background-color: rgba(255, 255, 255, 0.476);
+            padding: 2rem;
+            width: 30rem;
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        p{
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+        input{
+            width: 60%;
+        }
+        button{
+            width: 40%;
+            align-self: flex-end;
+        }
+        .form-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Registro de Usuario</h1>
+        <form class='form' action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}    
+            <button type="submit">Registrate e inicia sesión!</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppCoder - logout</title>
+    <style>
+        html{
+            height: 100%;
+            
+        }
+        h1{
+            color: white;
+            font-weight: 600;
+            font-size: 25px;
+            background-color: rgba(37, 37, 37, 0.555);
+            padding: 1rem;
+            box-shadow: 2px 15px 47px 0px rgba(253, 253, 253, 0.73);
+            border-radius: 10rem;
+        }
+        body{
+            display: flex;
+            height: 100%; 
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            margin: 0;
+            background-image: url('https://images.pexels.com/photos/891393/pexels-photo-891393.jpeg');
+            background-size: cover;
+            font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+        
+        
+        .button-6 {
+        align-items: center;
+        background-color: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: .25rem;
+        box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+        box-sizing: border-box;
+        color: rgba(0, 0, 0, 0.85);
+        cursor: pointer;
+        display: inline-flex;
+        font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        justify-content: center;
+        line-height: 1.25;
+        margin: 0;
+        min-height: 3rem;
+        padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+        position: relative;
+        text-decoration: none;
+        transition: all 250ms;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: baseline;
+        width: auto;
+        }
+
+        .button-6:hover,
+        .button-6:focus {
+        border-color: rgba(0, 0, 0, 0.15);
+        box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+        color: rgba(0, 0, 0, 0.65);
+        }
+
+        .button-6:hover {
+        transform: translateY(-1px);
+        }
+
+        .button-6:active {
+        background-color: #F0F0F1;
+        border-color: rgba(0, 0, 0, 0.15);
+        box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+        color: rgba(0, 0, 0, 0.65);
+        transform: translateY(0);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                <h1>Has cerrado sesion.</h1>
+                 <button class="button-6" role="button"><a href="{% url 'AppCoder_2:login2' %}">Volver al Ingresar</a></button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{% extends 'padre.html'%}
+
+{% load static %}
+
+{% block contenidoQueCambia%}
+        
+    <div style="background-image: url(https://images.pexels.com/photos/3646172/pexels-photo-3646172.jpeg); background-size: cover; background-attachment: fixed; height: 100rem;">
+        <header>
+            <div class="container position-relative">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="text-center text-black  p-2 mt-5">
+                            <!-- Page heading-->
+                            <h1 class="mb-5 fw-bold">Estudiantes</h1>
+                            <h2 class="fw-bold">Django</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div style="display: flex; flex-direction: column; align-items: center; height: 40rem; justify-content: center;">
+            <div style="width: 99.99%; text-align: center;">
+                <h1 style="background-color: rgba(255, 255, 255, 0.555); padding: 1rem; font-weight: bold;">AGREGAR ESTUDIANTE</h1>
+            </div>
+            {% if miFormulario.errors %}
+            <p style="color:red;">Estan mal los datos, revisar.</p>
+            {% endif %}
+        
+            <form action="" method="POST">{% csrf_token %}
+               
+               <table style="display: flex; justify-content: space-around;">
+                    {{miFormulario.as_table}}
+               </table>
+        
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+    <!--Colocamos lo que va a cambiar -->
+
+{% endblock %}

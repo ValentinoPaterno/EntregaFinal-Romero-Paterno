@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #333;
+            background-image: url("https://images.unsplash.com/photo-1551590192-8070a16d9f67?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80");
+            background-size: cover;
+
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .row {
+            max-width: 800px;
+            margin: auto;
+        }
+        .col {
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            border-radius: 5px;
+        }
+        h1 {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.5;
+        }
+        .btn {
+            background-color: #a17d19; /* cambia el color a azul */
+            color: #fff; /* cambia el color del texto a blanco */
+            font-size: 15px; /* aumenta el tamaño del texto */
+            padding: 10px 20px; /* aumenta el padding para hacer el botón más grande */
+            border: none; /* elimina el borde del botón */
+            border-radius: 5px; /* añade bordes redondeados */
+            cursor: pointer; /* cambia el cursor al pasar por encima del botón */
+            transition: all 0.3s ease; /* añade una transición suave cuando se pasa el ratón por encima */
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #000000; /* cambia el color de fondo al pasar el ratón por encima */
+            color: white;
+        }
+    </style>   
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Sobre Nosotros</h1>
+                <p>Somos Franco Romero y Valentino Paterno, dos jóvenes apasionados por la tecnología y la programación. Juntos, hemos creado una página web utilizando las tecnologías más innovadoras, como Python, Django, CSS y HTML.
+
+                   <p>Desde pequeños, hemos tenido un gran interés por el mundo de la tecnología y la informática. Con el tiempo, hemos desarrollado habilidades en el campo de la programación y la creación de sitios web. Hemos trabajado duro para perfeccionar nuestras habilidades, aprender nuevas tecnologías y estar al tanto de las últimas tendencias en el campo.</p>
+                    
+                    Con nuestro sitio web, queremos ofrecer una plataforma intuitiva y fácil de usar para nuestros usuarios, con un enfoque en la usabilidad y la estética. Estamos comprometidos a ofrecer una experiencia única y satisfactoria a nuestros visitantes.
+                    
+                    Nos enorgullece el trabajo que hemos realizado y estamos emocionados de compartirlo con el mundo. Siempre estamos abiertos a nuevas ideas y sugerencias, y esperamos continuar mejorando nuestro sitio web en el futuro. ¡Gracias por visitarnos!</p>
+
+                    <a href="{% url 'AppCoder:Inicio' %}" class="btn"> Volver a la pagina de Inicio</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

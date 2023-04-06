@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Cargar Avatar</title>
+</head>
+<body style="background-image: url(https://images.pexels.com/photos/733853/pexels-photo-733853.jpeg); background-size: cover;">
+    <div style="box-shadow: -15px 19px 5px 0px rgba(0,0,0,0.75); padding: 4rem; background-color: rgba(255, 255, 255, 0.507); display:flex; flex-direction: column; width: fit-content; margin: 0 auto; margin-top: 20rem;">
+        <h3 class="fw-bold" style="font-size: 3rem;">Cargar Avatar</h3>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ miFormulario.as_p  }}
+            <input type="submit" value="Actualizar">
+        </form>
+    </div>
+</body>
+</html>

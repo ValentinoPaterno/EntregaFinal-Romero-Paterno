@@ -1,0 +1,61 @@
+{% extends 'padre.html'%}
+
+{% load static %}
+
+{% block contenidoQueCambia%}
+        
+
+    <!--Colocamos lo que va a cambiar -->
+    <div style="background-image: url('https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg'); background-attachment: fixed; background-size: cover; height: 100rem;">
+        <header>
+            <div class="container position-relative">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="text-center text-black">
+                            <!-- Page heading-->
+                            <h1 class="mb-5 fw-bold">Mi primera web Intermedia!</h1>
+                            <h2 class="fw-bold">Django - Coderhouse</h2>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div style="margin: 0;">
+            <div class="text-center">
+                <h3 style="margin: 0; padding: 1rem; font-weight: bold;">Bienvenido a la página {{user.username|title}}!</h3>
+                <img height="200px" style="margin-bottom: 1rem; " src="{{url}}" />
+            </div>
+            {% if mensaje %}
+            <h5>
+            <p>{{mensaje}}</p>
+            </h5>
+            {% endif %}
+            <div style="background-color: rgba(255, 255, 255, 0.562);height: 30rem; display: flex; flex-direction: column; align-items: center; justify-content: center; ">
+                <div style="width: 99.99%; text-align: center;  color: rgb(0, 0, 0);">
+                    <h1 style="font-size: 2.5rem; font-weight: bold;">BUSQUEDA DE CAMADAS</h1>
+                </div>
+                <p style="font-size: 2rem; font-weight: bold;">Estamos buscando los cursos con número de camada: {{camada}}</p>
+                <form action="/appcoder1/buscar/" method="GET">
+            
+                    <input type="number" name="camada" id="camada">
+            
+                    <input type="submit" value="Buscar">
+                </form>
+            
+                
+            
+                {% if cursos %}
+            
+                <ul>
+                    {% for curso in cursos %}
+                        <li> {{curso.nombre}}</li>
+                        <li>{{curso.camada}}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+    </div>
+    </div>
+{% endblock %}
+<p style="color:red">{{respuesta}}</p>
